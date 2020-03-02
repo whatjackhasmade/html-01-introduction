@@ -1,0 +1,27 @@
+{
+	"private": true,
+	"version": "1.0.0",
+	"description": "Deck created with mdx-deck",
+	"scripts": {
+		"start": "mdx-deck deck.mdx",
+		"dev": "mdx-deck deck.mdx",
+		"build": "mdx-deck build deck.mdx",
+		"pdf": "mdx-deck pdf deck.mdx",
+		"image": "mdx-deck screenshot deck.mdx",
+		"help": "mdx-deck"
+	},
+	"keywords": [],
+	"author": "Jack Pritchard",
+	"license": "MIT",
+	"name": "gatsby-to-wordpress",
+	"dependencies": {
+		"mdx-deck": "^1.10.0",
+		"mdx-deck-code-surfer": "^0.5.5",
+		"prism-react-renderer": "^0.1.6",
+		"raw-loader": "^2.0.0",
+		"react": "^16.8.4",
+		"react-highlight": "^0.12.0",
+		"react-syntax-highlighter": "^10.2.1",
+		"styled-components": "^4.1.3"
+	}
+}

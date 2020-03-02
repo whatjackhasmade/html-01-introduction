@@ -1,0 +1,69 @@
+import { Head, Notes } from "mdx-deck";
+import { Styled } from "styled-components";
+
+export { default as theme } from "./theme.js";
+
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import nightOwl from "prism-react-renderer/themes/nightOwl";
+
+<Head>
+	<title>WordPress to Gatsby</title>
+</Head>
+
+import codeHeaderBasic from "!!raw-loader!./code/header/01-header.html";
+
+## HTML Introduction
+
+---
+
+### HTML
+
+HTML (HyperText Markup Language) is the most basic building block of the Web.
+
+It defines the meaning and structure of web content.
+
+Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML
+
+---
+
+### Building Our First Component
+
+---
+
+### Header
+
+<CodeSurfer
+	theme={nightOwl}
+	title="Converting the Content to JSON objects"
+	code={codeHeaderBasic}
+	lang="html"
+	steps={[
+		{
+			notes:
+				"To convert the blocks into usable JSON, I rely on some custom functions and new WP functions"
+		},
+		{
+			range: [4, 5],
+			notes:
+				"I am first replacing any absolute URL paths in my API to return relative paths"
+		},
+		{
+			range: [6, 13],
+			notes:
+				"To get the ACF images from their IDs and return ACF titles I am using custom functions I've developed"
+		},
+		{
+			range: [14, 16],
+			notes:
+				"Finally I am using a new function parse_blocks to process the block string and returning it as an array of objects"
+		}
+	]}
+/>
+
+The HTML `<header>` element represents introductory content, typically a group of introductory or navigational aids.
+
+It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+
+Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+
+---
