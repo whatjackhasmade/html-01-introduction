@@ -10,7 +10,10 @@ import nightOwl from "prism-react-renderer/themes/nightOwl";
 	<title>WordPress to Gatsby</title>
 </Head>
 
-import codeHeaderBasic from "!!raw-loader!./code/header/01-header.html";
+import codeHeader1 from "!!raw-loader!./code/header/01-header.html";
+import codeHeader2 from "!!raw-loader!./code/header/02-header.html";
+import codeHeader3 from "!!raw-loader!./code/header/03-header.html";
+import codeHeader4 from "!!raw-loader!./code/header/04-header.html";
 
 ## HTML Introduction
 
@@ -32,38 +35,128 @@ Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML
 
 ### Header
 
+The HTML `<header>` element represents introductory content, typically a group of introductory or navigational aids.
+
+It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+
+Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+
+---
+
 <CodeSurfer
 	theme={nightOwl}
-	title="Converting the Content to JSON objects"
-	code={codeHeaderBasic}
+	title="Creating our header"
+	code={codeHeader1}
 	lang="html"
 	steps={[
 		{
-			notes:
-				"To convert the blocks into usable JSON, I rely on some custom functions and new WP functions"
+			notes: ""
 		},
 		{
-			range: [4, 5],
-			notes:
-				"I am first replacing any absolute URL paths in my API to return relative paths"
+			range: [1, 1],
+			notes: "Opening tag"
 		},
 		{
-			range: [6, 13],
-			notes:
-				"To get the ACF images from their IDs and return ACF titles I am using custom functions I've developed"
-		},
-		{
-			range: [14, 16],
-			notes:
-				"Finally I am using a new function parse_blocks to process the block string and returning it as an array of objects"
+			range: [2, 2],
+			notes: "Closing tag"
 		}
 	]}
 />
+
+---
+
+### Nav
 
 The HTML `<header>` element represents introductory content, typically a group of introductory or navigational aids.
 
 It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 
 Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+
+---
+
+<CodeSurfer
+	theme={nightOwl}
+	title="Creating our header"
+	code={codeHeader2}
+	lang="html"
+	steps={[
+		{
+			notes: ""
+		},
+		{
+			range: [2, 2],
+			notes: ""
+		}
+	]}
+/>
+
+---
+
+### Anchor
+
+The HTML `<header>` element represents introductory content, typically a group of introductory or navigational aids.
+
+It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+
+Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+
+---
+
+<CodeSurfer
+	theme={nightOwl}
+	title="Creating our header"
+	code={codeHeader3}
+	lang="html"
+	steps={[
+		{
+			notes: ""
+		},
+		{
+			range: [3, 5],
+			notes: ""
+		}
+	]}
+/>
+
+---
+
+## HTML Attributes
+
+### Anchor 'href'
+
+`<a href="https://google.com">`
+
+The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+
+---
+
+<CodeSurfer
+	theme={nightOwl}
+	title="Creating our header"
+	code={codeHeader4}
+	lang="html"
+	steps={[
+		{
+			notes: ""
+		},
+		{
+			range: [3, 3],
+			notes: ""
+		},
+		{
+			range: [4, 4],
+			notes: ""
+		},
+		{
+			range: [5, 5],
+			notes: ""
+		},
+		{
+			range: [3, 5],
+			notes: ""
+		}
+	]}
+/>
 
 ---
