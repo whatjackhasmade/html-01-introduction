@@ -6,7 +6,7 @@
 		"start": "mdx-deck deck.mdx",
 		"d": "mdx-deck deck.mdx",
 		"dev": "mdx-deck deck.mdx",
-		"build": "mdx-deck build --no-html deck.mdx",
+		"build": "mdx-deck build --no-html deck.mdx && copyfiles assets/* dist",
 		"pdf": "mdx-deck pdf deck.mdx",
 		"image": "mdx-deck screenshot deck.mdx",
 		"help": "mdx-deck"
@@ -16,6 +16,7 @@
 	"license": "MIT",
 	"name": "html-01-introduction",
 	"dependencies": {
+		"copyfiles": "^2.2.0",
 		"mdx-deck": "^1.10.0",
 		"mdx-deck-code-surfer": "^0.5.5",
 		"prism-react-renderer": "^0.1.6",
