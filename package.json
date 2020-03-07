@@ -6,7 +6,7 @@
 		"start": "mdx-deck deck.mdx",
 		"d": "mdx-deck deck.mdx",
 		"dev": "mdx-deck deck.mdx",
-		"build": "mdx-deck build --no-html deck.mdx && copyfiles assets/* dist",
+		"build": "mdx-deck build --no-html deck.mdx && copyfiles assets/* dist && netlify deploy",
 		"pdf": "mdx-deck pdf deck.mdx",
 		"image": "mdx-deck screenshot deck.mdx",
 		"help": "mdx-deck"

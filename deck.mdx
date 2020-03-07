@@ -10,10 +10,9 @@ export const theme = myTheme;
 	<title>HTML | 01 | Introduction</title>
 </Head>
 
-import codeHeader1 from "!!raw-loader!./code/header/01-header.html";
-import codeHeader2 from "!!raw-loader!./code/header/02-header.html";
-import codeHeader3 from "!!raw-loader!./code/header/03-header.html";
-import codeHeader4 from "!!raw-loader!./code/header/04-header.html";
+import codeExample1 from "!!raw-loader!./code/a/01-a.html";
+import codeExample2 from "!!raw-loader!./code/a/02-a.html";
+import codeExample3 from "!!raw-loader!./code/a/03-a.html";
 
 ## HTML Introduction
 
@@ -23,49 +22,27 @@ import codeHeader4 from "!!raw-loader!./code/header/04-header.html";
 
 HTML (HyperText Markup Language) is the most basic building block of the Web.
 
-It defines the structure of any webpage you visit, and defines the content of a page.
-
 > Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML
 
 ---
 
 ### HTML
 
-If front-end development was compared to building a house...
-
-HTML acts as the bricks and materials used to layout the foundations of a building.
+It defines the structure of any webpage you visit, and defines the content of a page.
 
 > Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML
 
 ---
 
-<img src="assets/layout.png" />
+<img src="assets/anchor.jpg" />
 
-> Source: https://www.kissclipart.com/web-page-ux-layout-clipart-page-layout-web-page-us-k6rge5/download-clipart.html
-
----
-
-### Building Our First Component
-
-To get started with HTML, we are going to focus entirely on an isolated component.
-
-The first component we will build is the header component.
+> Source: https://incomejoin.com/2019/05/13/html-attributes-html-5-tutorial/
 
 ---
 
-### Header
+### Building A Link
 
-Header components are found on almost every website and are a pattern most are familiar with.
-
-Often, a header contains a logo, a navigation menu, some links, and various other elements.
-
----
-
-### Header
-
-To create the header, we are going to create an HTML element.
-
-The HTML `<header>` element represents the parent element used to group together our header children elements.
+The HTML `<a>` element (or anchor element), creates a hyperlink to web pages.
 
 > Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
 
@@ -74,7 +51,7 @@ The HTML `<header>` element represents the parent element used to group together
 <CodeSurfer
 	theme={nightOwl}
 	title="Our Code"
-	code={codeHeader1}
+	code={codeExample1}
 	lang="html"
 	steps={[
 		{
@@ -88,7 +65,7 @@ The HTML `<header>` element represents the parent element used to group together
 		},
 		{
 			lines: [1],
-			notes: "Next the name of our element (header)"
+			notes: "Next the name of our element (a)"
 		},
 		{
 			lines: [1],
@@ -101,7 +78,7 @@ The HTML `<header>` element represents the parent element used to group together
 		{
 			lines: [2],
 			notes:
-				"This follows the same structure as the opening tag, but with a forward slash before the element name (header)"
+				"This follows the same structure as the opening tag, but with a forward slash before the element name (a)"
 		},
 		{
 			notes: ""
@@ -111,50 +88,9 @@ The HTML `<header>` element represents the parent element used to group together
 
 ---
 
-### Navigation (nav)
+### Anchor text
 
-Next we will build our navigation menu.
-
-Building this element will be similar to our header element, with the name of our element now being `<nav>`.
-
-> Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
-
----
-
-<CodeSurfer
-	theme={nightOwl}
-	title="Our Code"
-	code={codeHeader2}
-	lang="html"
-	steps={[
-		{
-			lines: [1, 3],
-			notes:
-				"Before we create our navigation, we will want to create a new line in-between our 'header' opening and closing element tags."
-		},
-		{
-			lines: [2],
-			notes:
-				"We can then insert our new 'nav' (navigation) element as a child of our 'header' parent element. With appropriate opening and closing tags."
-		}
-	]}
-/>
-
----
-
-### So Far So Good
-
-So far we have two HTML elements.
-
-The only issue is that we have only worked on structural elements and our page doesn't visually display anything to a user.
-
----
-
-### Anchor
-
-The HTML `<a>` element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
-
-Content within each `<a>` should indicate the link's destination.
+Text within each `<a>` should describe the link's destination.
 
 > Further Reading: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
 
@@ -162,27 +98,19 @@ Content within each `<a>` should indicate the link's destination.
 
 <CodeSurfer
 	theme={nightOwl}
-	title="Creating our header"
-	code={codeHeader3}
+	title="Our Code"
+	code={codeExample2}
 	lang="html"
 	steps={[
 		{
-			range: [2, 6],
-			notes: "Anchor elements will exist as children of our navigation element"
+			lines: [1],
+			notes:
+				"For example, an anchor that we want to navigate to the page titled 'About' may include the title in its text content"
 		},
 		{
-			lines: [3],
+			lines: [1],
 			notes:
-				"Each anchor (a) consists of an opening tag, text content, and then a closing tag"
-		},
-		{
-			range: [3, 5],
-			notes:
-				"Each anchor (a) consists of an opening tag, text content, and then a closing tag"
-		},
-		{
-			notes:
-				"When viewed from a top level, this is what our header looks like now"
+				"This content is important, even when visually hidden as it is read aloud to screen readers and creates accessible pages"
 		}
 	]}
 />
@@ -191,15 +119,13 @@ Content within each `<a>` should indicate the link's destination.
 
 ## HTML Attributes
 
-HTML opening elements can contain attributes related to the actions or way in which an element is rendered to a page.
-
-These attributes are captured after the element name (e.g. nav) and before the right-angle bracket (>).
+HTML elements can contain attributes related to the actions of the element.
 
 ---
 
 ## Anchor 'href' Attribute
 
-`<a href="https://google.com">`
+`<a href="test.com">`
 
 The URL that the hyperlink points to.
 
@@ -209,33 +135,19 @@ The URL that the hyperlink points to.
 
 <CodeSurfer
 	theme={nightOwl}
-	title="Creating our header"
-	code={codeHeader4}
+	title="Our Code"
+	code={codeExample3}
 	lang="html"
 	steps={[
 		{
-			lines: [3],
+			lines: [1],
 			notes:
-				"We can add a 'href' attribute to the home anchor elment with the value '/'."
+				"We can add a 'href' attribute to the anchor elment with the value '/about'."
 		},
 		{
-			lines: [3],
+			lines: [1],
 			notes:
-				"The value '/' tells the anchor to use the name of the current website e.g. (test.com) as the link to direct a user to when clicked on."
-		},
-		{
-			lines: [4],
-			notes:
-				"When repeating the process with the about anchor element, we use the value '/about'. This tells the browser to direct a user to the current website + about (e.g. test.com/about)."
-		},
-		{
-			range: [3, 5],
-			notes:
-				"When complete for all anchor tags, we've created a functional navigation system, accessible to all those using our website."
-		},
-		{
-			range: [1, 7],
-			notes: ""
+				"The value '/about' is assigned to the 'href' attribute. This tells the browser to direct a user to the current website + about (e.g. test.com/about)."
 		}
 	]}
 />
@@ -261,3 +173,7 @@ The URL that the hyperlink points to.
 > View in full at: https://7swl2.csb.app/
 >
 > View source code at: https://codesandbox.io/s/admiring-snow-7swl2?fontsize=14&hidenavigation=1&theme=dark
+
+```
+
+```
